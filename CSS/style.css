@@ -1,0 +1,454 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+
+/* box-sizing est appliqué à tous les éléments */
+* { 
+ box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+
+/* --------------------------- Header --------------------------- */
+
+header {
+	width: 90%;
+	height: 100px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header div {
+	display: flex;
+	justify-content: center;
+}
+
+#logo {
+	width: 40%;
+}
+
+/* ----- Navigation ----- */
+
+nav {
+	width: 25%;
+}
+
+nav ul {
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	padding-inline-start: 0px;
+	list-style-type: none;
+}
+
+nav a {
+	text-decoration: none;
+	padding: 40px 30px;
+	color: black;
+}
+
+nav a:hover {
+	border-top: 2px  #0065FC solid;
+	color: #0065FC;
+}
+
+
+
+
+
+/* ---------------------------- Main ---------------------------- */
+
+main {
+	margin: 0 3%;
+}
+
+h1 {
+	margin: auto;
+	font-size: 30px;
+}
+
+h1, h2 {
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 a {
+	text-decoration: none;
+	color: black;
+}
+
+h3 a:hover {
+	color: #0065FC;
+}
+
+p {
+	margin: 5px 0px;
+}
+
+
+
+/* ---------------------- Section Accueil ----------------------- */
+
+/* ----- Formulaire ----- */
+form {
+	display: flex;
+	margin: 15px 0px;
+}
+
+form i {
+	margin-right: -5px;
+	background-color: #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+}
+
+form i, #ville, #recherche {	
+	padding: 10px 18px;
+	font-size: 18px;
+}
+
+form i, #ville {
+	border: 2px solid #F2F2F2;
+}
+
+#loupe {
+	display: none;
+}
+
+#ville {
+	font-weight: bold;
+}
+
+.search {
+	color: white;
+	background-color: #0065FC;
+	margin-left: -5px;
+	border: 2px solid #0065FC;
+	border-radius: 0px 15px 15px 0px;
+}
+
+
+
+
+/* ------- Filtres ------- */
+
+.section-filtres {
+	margin: 30px 0px;
+	display: flex;
+	align-items: center;
+	font-size: 19px;
+	font-weight: bold;
+}
+
+.container-filtres {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.filtre {
+	display: flex;
+	align-items: center;
+	margin: 0px 15px;
+	padding-right: 20px;
+	border: 3px solid #F2F2F2;
+	border-radius: 45px / 45px;
+}
+
+.filtre:hover {
+	color: #0065FC;
+	box-shadow: 1px 1px 12px #0065FC;
+}
+
+.filtre i {
+	margin: -4px;
+	padding: 12px;
+	color: #0065FC;
+	background-color: #DEEBFF;
+	border: 2px solid #DEEBFF;
+	border-radius: 45px;
+}
+
+.fa-solid.fa-child-reaching {
+	padding: 12px 15px;
+}
+
+.filtre p, .info p {	
+	margin: 0px 10px;
+}
+
+
+
+/* --------- Info --------- */
+
+.info {
+	margin: auto;
+	display: flex;
+	align-items: center;
+}
+
+.info i {
+	font-size: 14px;
+	color: #0065FC;
+	padding: 5px 10px;
+	border: 2px solid #F2F2F2;
+	border-radius: 15px / 15px;
+}
+
+
+
+
+
+/* ----------------- Section Containeur Centrale ---------------- */
+
+#container-central {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0px
+}
+
+#hebergements {
+	width: 65%;
+}
+
+#populaires {
+	width: 32%;
+}
+	
+#hebergements, #populaires {
+	padding: 40px;
+	background-color: #F2F2F2;
+	border-radius: 25px;
+}
+
+
+
+/* --Containeur de Cartes-- */
+.container-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+
+/* ----------Carte--------- */
+.card {
+	margin: 15px 0px;				
+	background-color: white;
+	border: 7px solid white;
+	border-radius: 25px;
+	box-shadow: 1px 1px 12px lightgrey;
+}
+
+#hebergements .card {
+	width: 31%;
+	height: 260px;
+}
+
+#populaires .card {
+	width: 100%;
+	height: 180px;
+}
+
+.card a {
+	display: flex;
+	height: 100%;
+	text-decoration-line: none;
+	color: black;
+}
+
+#hebergements .card a {
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/* ------Carte images------ */
+#hebergements .card img {	
+	object-fit: cover;
+	height: 60%;
+	border-radius: 20px 20px 0px 0px;
+}
+
+#populaires .card img {
+	object-fit: cover;
+	width: 40%;	
+	border-radius: 20px 0px 0px 20px;
+}
+
+
+
+/* ---Corps de la carte---- */
+#hebergements .card-body {
+	padding: 0px 0px 10px 10px;
+}
+
+#hebergements .card h3, #populaires .card h3 {
+	margin: 0px;
+}
+
+#populaires .card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;	
+	padding:  0px 20px;
+	width: 60%;
+}
+
+/* --Etoiles de la carte--- */
+.card-stars {
+	display: flex;
+}
+
+#populaires .card-stars {
+	margin-top: 40px;
+}
+
+.card-stars-blue {
+	color: #0065FC;
+}
+
+.card-stars-grey {
+	color: #F2F2F2;
+}
+
+/* --Les plus populaires--- */
+.titre-populaires {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.titre-populaires i {
+	font-size: 20px;
+}
+
+.link {
+	margin-top: 15px;
+}
+
+.link a{
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration-line: none;
+	color: black;
+}
+
+
+
+
+
+/* --------------------- Section Activités ----------------------- */
+
+/* -Containeur des Cartes-- */
+#activity {
+	margin: 70px 0px;
+}
+
+#activity .container-cards {
+	height: 500px;
+}
+
+/* Grandes / Petites Cartes */
+.large-cards, .small-cards {
+	height: 100%;
+	width: 23%;
+	display: flex;
+	flex-direction: column;
+}
+
+/* -----Grandes Cartes----- */
+.large-cards .card-activity {
+	height: 100%;
+}
+
+.large-cards .card-activity img {
+	height: 87%;
+}
+
+
+
+/* -----Petites Cartes----- */
+.small-cards {
+	justify-content: space-between;
+}
+
+.small-cards .card-activity {
+	height: 45%;
+}
+
+
+
+/* ---------Cartes--------- */
+.card-activity {
+	border-radius: 25px;
+	box-shadow: 1px 1px 12px lightgrey;
+}
+
+.card-activity a {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	text-decoration-line: none;
+	color: black;
+}
+
+.card-activity img {
+	object-fit: cover;					
+	width: 100%;
+	height: 70%;
+	border-radius: 20px 20px 0px 0px;
+}
+
+.card-activity h3 {
+	padding: 0px 20px;
+}
+
+.card-activity:hover, .card:hover {
+	box-shadow: 1px 1px 12px #0065FC;
+}
+
+.card-activity a:hover, .card a:hover {
+	color: #0065FC;
+}
+
+
+
+
+
+/* --------------------- Pied de page ----------------------- */
+
+footer {
+	display: flex;	
+	align-items: center;
+	height: 200px;
+	width: 100%;
+	background-color: #F2F2F2;
+}
+
+.container-footer {
+	display: flex;	
+	justify-content: space-between;
+	width: 70%;
+	margin-left: 55px;
+}
+
+footer ul {
+	padding-inline-start: 0px;
+	list-style-type: none;
+}
+
+footer li {
+	padding: 6px 0px;
+}
